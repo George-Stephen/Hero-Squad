@@ -4,24 +4,24 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class Hero {
-    private  int id;
+    private  int Id;
     private String Name ;
-     private int age ;
+     private int Age ;
      private String Superpower ;
      private String Weakness ;
      private String Domain ;
-     private String power_origin;
+     private String Power_origin;
      private String Squad ;
     private static ArrayList<Hero> mInstances = new ArrayList<>();
 
     public Hero( int id ,String name, int age, String superpower, String weakness, String domain, String power_origin,String squad) {
-        this.id = id ;
+        this.Id = id ;
         this.Name = name;
-        this.age = age;
+        this.Age = age;
         Superpower = superpower;
         Weakness = weakness;
         Domain = domain;
-        this.power_origin = power_origin;
+        this.Power_origin = power_origin;
         this.Squad = squad;
         this.mInstances.add(this);
     }
@@ -34,7 +34,7 @@ public class Hero {
         return Objects.equals(Superpower, hero.Superpower) &&
                 Objects.equals(Weakness, hero.Weakness) &&
                 Objects.equals(Domain, hero.Domain) &&
-                Objects.equals(power_origin, hero.power_origin) &&
+                Objects.equals(Power_origin, hero.Power_origin) &&
                 Objects.equals(Squad, hero.Squad);
     }
 
@@ -44,7 +44,7 @@ public class Hero {
 
     @Override
     public int hashCode() {
-        return Objects.hash(Superpower, Weakness, Domain, power_origin, Squad);
+        return Objects.hash(Superpower, Weakness, Domain, Power_origin, Squad);
     }
 
     public String getName() {
@@ -56,7 +56,7 @@ public class Hero {
     }
 
     public String getPower_origin() {
-        return power_origin;
+        return Power_origin;
     }
 
     public String getSuperpower() {
@@ -64,7 +64,7 @@ public class Hero {
     }
 
     public int getAge() {
-        return age;
+        return Age;
     }
 
     public String getWeakness() {

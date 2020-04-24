@@ -24,8 +24,21 @@ public class App {
             model.put("Heroes", Heroes);
             return new ModelAndView(model, "hero.hbs");
         }, new HandlebarsTemplateEngine());
+        get ("/squads/new",(request, response) -> {
+            Map<String,Object> model = new HashMap <String,Object>() ;
+            String squad_serial = request.queryParams("squad_serial");
+            String squad_Name = request.queryParams("squad_Name");
+            String leader = request.queryParams("leader");
+            String cause = request.queryParams("cause");
+            model.put("squad_serial", squad_serial);
+            model.put("squad_Name", squad_Name);
+            model.put("leader", leader);
+            model.put("cause", cause);
+            return new ModelAndView(model, "squads.hbs");
+        }, new HandlebarsTemplateEngine());
+        }
 
         }
 
 
-    }
+
