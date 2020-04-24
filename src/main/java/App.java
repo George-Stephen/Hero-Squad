@@ -12,14 +12,20 @@ public class App {
     public static void main(String[] args) {
         staticFileLocation("/public");
 
-        get("/categories", (request, response) -> {
+        get("/squads", (request, response) -> {
             Map<String, ArrayList<Squad>> model = new HashMap<>();
-            ArrayList myRectangleArrayList = Squad.getmInstances();
-            model.put("myRectangles", myRectangleArrayList);
-            return new ModelAndView(model, "Categories.hbs");
+            ArrayList Squads = Squad.getmInstances();
+            model.put("Squads", Squads);
+            return new ModelAndView(model, "squads.hbs");
         }, new HandlebarsTemplateEngine());
+        get("/heroes", (request, response) -> {
+            Map<String, ArrayList<Squad>> model = new HashMap<>();
+            ArrayList Heroes = Hero.getmInstances();
+            model.put("Heroes", Heroes);
+            return new ModelAndView(model, "hero.hbs");
+        }, new HandlebarsTemplateEngine());
+
         }
 
 
     }
-}
