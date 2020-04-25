@@ -1,30 +1,24 @@
 package objects;
 
 import java.util.ArrayList;
+import java.util.List;
+
 
 public class Squad{
-    private int Squad_serial;
+    private int id;
     private String Squad_Name;
-    private String  Leader;
     private String  Cause;
     private static ArrayList<Squad> mInstances = new ArrayList<>();
     private int Max ;
+    private List<Hero> heroes;
 
-    public Squad(int squad_serial, String squad_Name, String leader,String cause,int max) {
-        this.Squad_serial = squad_serial;
+    public Squad( String squad_Name, String cause,int max) {
         this.Squad_Name = squad_Name;
-        this.Leader = leader;
         this.Cause = cause;
         this.Max = max;
         this.mInstances.add(this);
-    }
-
-    public int getSquad_serial() {
-        return Squad_serial;
-    }
-
-    public String getLeader() {
-        return Leader;
+        id = mInstances.size();
+        heroes = new ArrayList<Hero>();
     }
 
     public String getSquad_Name() {
@@ -33,5 +27,11 @@ public class Squad{
 
     public static ArrayList<Squad> getmInstances() {
         return mInstances;
+    }
+    public List<Hero> getHeroes() {
+        return heroes;
+    }
+    public void addHero(Hero hero) {
+        heroes.add(hero);
     }
 }
