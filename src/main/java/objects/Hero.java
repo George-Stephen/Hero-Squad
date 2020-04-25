@@ -4,26 +4,20 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 public class Hero {
-    private  int id;
     private String Name ;
-     private int age ;
+     private int Age ;
      private String Superpower ;
      private String Weakness ;
-     private String Domain ;
-     private String power_origin;
-     private String Squad ;
     private static ArrayList<Hero> mInstances = new ArrayList<>();
+    private int Id;
 
-    public Hero( int id ,String name, int age, String superpower, String weakness, String domain, String power_origin,String squad) {
-        this.id = id ;
+    public Hero(String name, int age, String superpower, String weakness) {
         this.Name = name;
-        this.age = age;
-        Superpower = superpower;
-        Weakness = weakness;
-        Domain = domain;
-        this.power_origin = power_origin;
-        this.Squad = squad;
+        this.Age = age;
+        this.Superpower = superpower;
+        this.Weakness = weakness;
         this.mInstances.add(this);
+        Id = mInstances.size();
     }
 
     @Override
@@ -32,10 +26,7 @@ public class Hero {
         if (o == null || getClass() != o.getClass()) return false;
         Hero hero = (Hero) o;
         return Objects.equals(Superpower, hero.Superpower) &&
-                Objects.equals(Weakness, hero.Weakness) &&
-                Objects.equals(Domain, hero.Domain) &&
-                Objects.equals(power_origin, hero.power_origin) &&
-                Objects.equals(Squad, hero.Squad);
+                Objects.equals(Weakness, hero.Weakness);
     }
 
     public static ArrayList<Hero> getmInstances() {
@@ -44,19 +35,11 @@ public class Hero {
 
     @Override
     public int hashCode() {
-        return Objects.hash(Superpower, Weakness, Domain, power_origin, Squad);
+        return Objects.hash(Superpower, Weakness);
     }
 
     public String getName() {
         return Name;
-    }
-
-    public String getDomain() {
-        return Domain;
-    }
-
-    public String getPower_origin() {
-        return power_origin;
     }
 
     public String getSuperpower() {
@@ -64,7 +47,7 @@ public class Hero {
     }
 
     public int getAge() {
-        return age;
+        return Age;
     }
 
     public String getWeakness() {
