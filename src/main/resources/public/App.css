@@ -1,9 +1,11 @@
 body{
  text-align : center ;
- background-color : gray;
+ background-color : cream;
+ color: gray;
 }
-ul{
+a{
  text-align : center ;
+ color: sea-green;
 }
 button{
 width : 500px;
@@ -11,5 +13,5 @@ width : 500px;
 }
 .success{
 color:green;
-font-size : 500px;
+font-size : 150px;
 }
