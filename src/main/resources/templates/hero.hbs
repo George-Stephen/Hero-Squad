@@ -1,7 +1,15 @@
 {{#partial "content"}}
     <h3>All Heroes available</h3>
+    {{#if Heroes}}
     {{#each Heroes}}
         <h2>{{name}} </h2>
+        <p>Superpower : {{superpower}}</p>
+        <p>Age : {{age}}</p>
+        <p>Weakness : {{weakness}}</p>
     {{/each}}
+    {{else}}
+        <p>No superheroes recorded</p>
+    {{/if}}
+    <a href="/Squad/Heroes/form"><button>Add new hero</button></a>
 {{/partial}}
 {{> layout.hbs}}

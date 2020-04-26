@@ -6,7 +6,7 @@
 {{#partial "content"}}
 
     <h1>Fill in the name of your superhero!</h1>
-    <form action='/Heroes/new' method="post">
+    <form action='/Squad/Heroes/new' method="post">
         <div class="form-group">
             <label for="sender">Name</label>
             <input id="sender" name="Name" class="form-control" type="text">
@@ -23,7 +23,22 @@
             <label for="Weakness">Weakness</label>
             <input id="Weakness" name="Weakness" class="form-control" type="text">
         </div>
-        <button type="submit" class="btn btn-success">Go!</button>
+        <div class="form-group">
+            <label for="founder">Founder</label>
+            <select class="form-control" id="squad" name="squad">
+                {{#if Squads}}
+                    {{#each Squads}}
+                        <option>{{squad_Name}}</option>
+                    {{/each}}
+                {{else}}
+                    <option>No squads available</option>
+                {{/if}}
+
+            </select>
+        </div>
+        {{#if Squads}}
+            <button class="btn btn-outline-secondary" type="submit">Save</button>
+        {{/if}}
     </form>
     <!--form.hbs.-->
 {{/partial}}
