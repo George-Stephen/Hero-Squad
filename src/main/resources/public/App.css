@@ -22,3 +22,9 @@ border-radius :  5px;
 input{
 background-color: transparent;
 }
+.jumbotron {
+    border-radius: 10px;
+    font-family: 'Bangers', cursive;
+    color: white;
+    background-size : 900px;
+}

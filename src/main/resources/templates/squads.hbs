@@ -1,4 +1,5 @@
 {{#partial "content"}}
+    <div class="jumbotron">
     <h3>All Squads available</h3>
     {{#if Squads}}
      {{#each Squads}}
@@ -8,5 +9,6 @@
         No Squads recorded recently
     {{/if}}
     <a href="/Squads/form"><button>Add new Squad</button></a>
+    </div>
 {{/partial}}
 {{> layout.hbs}}
