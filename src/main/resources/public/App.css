@@ -1,6 +1,6 @@
 body{
  text-align : center ;
- background-image : url("https://images.app.goo.gl/chsYrx3xdpeQGqGa7");
+ background-color : gray;
 }
 ul{
  text-align : center ;
@@ -8,4 +8,8 @@ ul{
 button{
 width : 500px;
 
+}
+.success{
+color:green;
+font-size : 500px;
 }
