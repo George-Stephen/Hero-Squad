@@ -24,6 +24,7 @@ public class Hero {
         this.squadAlliance = squad.getSquad_Name();
     }
 
+
     public String getSquadAlliance() {
         return squadAlliance;
     }

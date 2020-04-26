@@ -12,6 +12,7 @@ public class Squad{
     private List<Hero> heroMembers = new ArrayList<>();
     private int Max ;
     private List<Hero> heroes;
+    private int Total;
     private boolean isSquadFull = false;
 
     public Squad( String squad_Name, String cause,int max) {
@@ -19,6 +20,7 @@ public class Squad{
         this.Cause = cause;
         this.Max = max;
         this.mInstances.add(this);
+        Total = mInstances.size();
         id = mInstances.size();
         heroes = new ArrayList<Hero>();
 
@@ -45,6 +47,9 @@ public class Squad{
         } else {
             heroMembers.add(hero);
         }
+    }
+    public static void clearSquadList() {
+        mInstances.clear();
     }
 
 }
