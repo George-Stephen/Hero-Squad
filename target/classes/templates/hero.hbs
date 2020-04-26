@@ -1,0 +1,19 @@
+{{#partial "content"}}
+    <div class="jumbotron">
+    <h3>All Heroes available
+        <div class="card">
+    {{#if Heroes}}
+    {{#each Heroes}}
+        <h2>{{name}} </h2>
+        <p>Superpower : {{superpower}}</p>
+        <p>Age : {{age}}</p>
+        <p>Weakness : {{weakness}}</p>
+    {{/each}}
+    {{else}}
+        <p>No superheroes recorded</p>
+    {{/if}}
+        </div>
+    </div>
+    <a href="/Squad/Heroes/form"><button>Add new hero</button></a>
+{{/partial}}
+{{> layout.hbs}}
