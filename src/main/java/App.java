@@ -15,7 +15,9 @@ public class App {
         get("/",(request, response) -> {
             Map<String,Object> model = new HashMap<>();
             List<Squad> squads = Squad.getmInstances();
+            List<Hero> heroes = Hero.getmInstances();
             model.put("Squads",squads);
+            model.put("Heroes",heroes);
             return new ModelAndView(model,"index.hbs");
         },new HandlebarsTemplateEngine());
 
@@ -82,6 +84,8 @@ public class App {
             model.put("Heroes",Heroes);
             return new ModelAndView(model,"hero.hbs");
         },new HandlebarsTemplateEngine());
+
+
     }
 
 

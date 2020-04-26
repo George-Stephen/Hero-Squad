@@ -5,7 +5,12 @@
         <h4>All squads and heroes</h4>
         <div class="col-md-4">
             {{#each Squads}}
-                Number of Squads available : {{Total}} ;
+                {{squad_Name}}
+            {{/each}}
+        </div>
+        <div class="col-md-4">
+            {{#each Heroes}}
+                {{name}}
             {{/each}}
         </div>
     </div>

@@ -48,5 +48,8 @@ public class Squad{
             heroMembers.add(hero);
         }
     }
+    public static void clearSquadList() {
+        mInstances.clear();
+    }
 
 }
