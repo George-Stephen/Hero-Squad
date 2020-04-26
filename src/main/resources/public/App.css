@@ -1,6 +1,6 @@
 body{
  text-align : center ;
- background-color : cream;
+ background-color : #323a3d;
  color: gray;
 }
 a{
@@ -13,5 +13,12 @@ width : 500px;
 }
 .success{
 color:green;
-font-size : 150px;
+font-size : 100px;
+}
+form{
+border-radius :  5px;
+
+}
+input{
+background-color: transparent;
 }
