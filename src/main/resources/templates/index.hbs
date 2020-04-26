@@ -1,15 +1,15 @@
 {{#partial "content"}}
     <h3>Want to join the fun of being a superhero</h3>
     <a href="/Squads/form"><button class="btn btn-danger">Create your own Crew</button></a>
-    <div class="row">
+    <div class="row" style="background-color : gray">
         <h4>All squads and heroes</h4>
-        <div class="col-md-4">
+        <div class="col-md-5">
             <h4>All Squads recorded</h4>
             {{#each Squads}}
                 {{squad_Name}}
             {{/each}}
         </div>
-        <div class="col-md-4">
+        <div class="col-md-5">
             <h4>All Heroes recorded</h4>
             {{#each Heroes}}
                 {{name}}
