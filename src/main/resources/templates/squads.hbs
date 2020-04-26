@@ -1,7 +1,13 @@
 {{#partial "content"}}
     <h3>All Squads available</h3>
+    {{#if Squads}}
      {{#each Squads}}
-         <p>{{squad_Name}} </p>
+         <h3>{{squad_Name}}</h3>
+         <a href="/Heroes/form"><button class="btn btn-success">Add hero to the squad</button></a>
      {{/each}}
+    {{else}}
+        No Squads recorded recently
+    {{/if}}
+    <a href="/Squads/form"><button>Add new Squad</button></a>
 {{/partial}}
 {{> layout.hbs}}

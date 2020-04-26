@@ -10,14 +10,22 @@ public class Hero {
      private String Weakness ;
     private static ArrayList<Hero> mInstances = new ArrayList<>();
     private int Id;
+    private String squadAlliance;
 
-    public Hero(String name, int age, String superpower, String weakness) {
+    public Hero(String name, int age, String superpower, String weakness,Squad squad) {
         this.Name = name;
         this.Age = age;
         this.Superpower = superpower;
         this.Weakness = weakness;
         this.mInstances.add(this);
-        Id = mInstances.size();
+        this.Id = mInstances.size();
+    }
+    public void setSquadAlliance(Squad squad) {
+        this.squadAlliance = squad.getSquad_Name();
+    }
+
+    public String getSquadAlliance() {
+        return squadAlliance;
     }
 
     @Override
@@ -53,4 +61,16 @@ public class Hero {
     public String getWeakness() {
         return Weakness;
     }
+    public static Hero find(int Id) {
+            return mInstances.get(Id - 1);
+    }
+
+    public int getId() {
+        return Id;
+    }
+
+    public static void clear(){
+        mInstances.clear();
+    }
+
 }
