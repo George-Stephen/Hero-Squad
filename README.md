@@ -9,5 +9,8 @@ I have used Java/Spark,html and css to build this application
 This application does not need any installation since it is an web application despite the use of Java
 This application can be run by a Web browser as long as the user has the link
 ## B.D.D
-
+The user is meant to create a squad of heroes in order for the system to record the instance of a new hero.When the user wants to save a new hero.The user is only allowed to enter a hero into the system only if there is an instance of a squad in the system session.
+## Deployment
+Use the link to heroku app in the repository details above
+## License 
 
