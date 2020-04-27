@@ -14,3 +14,4 @@ The user is meant to create a squad of heroes in order for the system to record 
 Use the link to heroku app in the repository details above
 ## License 
 
+MIT License 2020
